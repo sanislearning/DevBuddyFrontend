@@ -7,7 +7,7 @@ function ChatPage() {
   const [input, setInput] = useState("");
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    e.preventDefault(); //prevents the page from defaulting rerendering on submit
 
     const userMessage = { role: "user", content: input };
     const newMessages = [...messages, userMessage];
